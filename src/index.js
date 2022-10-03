@@ -26,7 +26,7 @@ dotenv.config()
 require('./config/database.js')
 
 // Router Config
-app.use('/api/v1', route)
+app.use('/', route)
 
 // Unavailable Request
 app.use((req, res, next) => {
