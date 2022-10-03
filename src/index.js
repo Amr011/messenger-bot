@@ -28,6 +28,9 @@ require('./config/database.js')
 // Router Config
 app.use('/', route)
 
+// app config
+app.set('port', process.env.PORT || 3000)
+
 // Unavailable Request
 app.use((req, res, next) => {
    res.status(404).json({
@@ -38,6 +41,6 @@ app.use((req, res, next) => {
    res.end()
 })
 
-app.listen(process.env.PORT || 4500, () => {
-   console.log(`Server Running on port:${port}`)
+app.listen(app.get('port'), () => {
+   console.log(`Server Running`)
 })

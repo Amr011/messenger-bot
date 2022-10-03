@@ -3,7 +3,7 @@ const express = require('express')
 const router = express.Router()
 
 const processPostback = require('../processes/postback')
-const processMessage = require('../processes/messages')
+const processMessage = require('../processes/message')
 
 router.route('/').get((req, res) => {
    return res.status(200).json('It Works')
