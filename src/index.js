@@ -38,8 +38,6 @@ app.use((req, res, next) => {
    res.end()
 })
 
-const port = 4000
-
-app.listen(port, () => {
+app.listen(proccess.env.PORT || 4500, () => {
    console.log(`Server Running on port:${port}`)
 })
