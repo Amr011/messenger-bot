@@ -38,6 +38,6 @@ app.use((req, res, next) => {
    res.end()
 })
 
-app.listen(proccess.env.PORT || 4500, () => {
+app.listen(process.env.PORT || 4500, () => {
    console.log(`Server Running on port:${port}`)
 })
